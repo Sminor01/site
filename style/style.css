@@ -152,6 +152,13 @@ ul {
     margin-bottom: 10px;
 }
 
+.list-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}
+
 /* Контакты */
 .contact {
     padding: 50px 20px;
