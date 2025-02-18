@@ -116,13 +116,17 @@ ul {
 
 .gallery {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .gallery-item {
-    flex: 1 1 30%;
     margin: 10px;
+    max-width: 300px;
+    height: 300px;
 }
 
 .gallery-item img {
