@@ -3,17 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ziko</title>
+    <title>Ziko - Видеограф</title>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <header>
-        
-    </header>
-    <body>
-        
-    </body>
-    <footer>
+    <section class="main-page">
+        <header class="header">
+            <div class="logo">
+                <h1>Ziko</h1>
+                <p>Видеограф</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero">
+            <h2>Профессиональная видеосъемка для ваших событий</h2>
+            <p>Запечатлейте важные моменты вашей жизни с помощью качественного видео.</p>
+            <a href="#contact" class="cta-button">Связаться со мной</a>
+        </div>
+    </section>
 
+    <section id="about" class="about">
+        <h2>Обо мне</h2>
+        <p>Меня зовут Ziko, и я профессиональный видеограф с многолетним опытом работы. Я специализируюсь на съемке свадеб, корпоративных мероприятий, рекламных роликов и многого другого. Моя цель — создавать видео, которые будут радовать вас долгие годы.</p>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Портфолио</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="./images/portfolio1.jpg" alt="Пример работы 1">
+            </div>
+            <div class="gallery-item">
+                <img src="./images/portfolio2.jpg" alt="Пример работы 2">
+            </div>
+            <div class="gallery-item">
+                <img src="./images/portfolio3.jpg" alt="Пример работы 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Услуги</h2>
+        <ul>
+            <li>Свадебная видеосъемка</li>
+            <li>Корпоративные мероприятия</li>
+            <li>Рекламные ролики</li>
+            <li>Монтаж видео</li>
+            <li>Аэросъемка</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь со мной, чтобы обсудить ваш проект:</p>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ziko. Все права защищены.</p>
     </footer>
 </body>
 </html>
