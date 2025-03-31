@@ -21,26 +21,26 @@
 <script setup>
 const img = useImage()
 useSeoMeta({
-  title: 'Hato | Minimal Portfolio Showcase',
-  ogTitle: 'Hato | Minimal Portfolio Showcase',
+  title: 'Ziko',
+  ogTitle: 'Ziko',
   description:
-    'Discover Hato, the sleek portfolio website perfect for freelancers, photographers, and artists made with Nuxt UI',
+    '',
   ogDescription:
-    'Discover Hato, the sleek portfolio website perfect for freelancers, photographers, and artists made with Nuxt UI',
+    '',
   ogImage: "https://res.cloudinary.com/dkr1hluva/image/upload/v1713023084/og/og-hato_roec1l.jpg",
   ogImageSecureUrl: 'https://res.cloudinary.com/dkr1hluva/image/upload/v1713023084/og/og-hato_roec1l.jpg',
   ogUrl: 'https://res.cloudinary.com/dkr1hluva/image/upload/v1713023084/og/og-hato_roec1l.jpg',
   twitterImage: "https://res.cloudinary.com/dkr1hluva/image/upload/v1713023084/og/og-hato_roec1l.jpg",
   twitterCard: "summary_large_image",
-  twitterTitle: 'Hato | Minimal Portfolio Showcase',
-  twitterDescription: 'Discover Hato, the sleek portfolio website perfect for freelancers, photographers, and artists made with Nuxt UI',
+  twitterTitle: 'Ziko',
+  twitterDescription: '',
   ogImageWidth: 1280,
   ogImageHeight: 720,
 });
 
 useHead({
   htmlAttrs: {
-    lang: 'en'
+    lang: 'us'
   },
   link: [
     {
