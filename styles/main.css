@@ -345,11 +345,11 @@ footer {
     animation: fadeIn 1s ease forwards;
 }
 
-.scroll-reveal {
+/* .scroll-reveal {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
-}
+} */
 
 .scroll-reveal.visible {
     opacity: 1;
