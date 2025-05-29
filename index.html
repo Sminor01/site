@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оператор - Портфолио</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="videos/background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="fade-in">Оператор</h1>
+            <p class="fade-in">Профессиональная видеосъемка и монтаж</p>
+        </section>
+
+        <!-- About Section -->
+        <section class="about scroll-reveal">
+            <div class="content">
+                <h2>Обо мне</h2>
+                <p>Профессиональный оператор с опытом создания качественного видеоконтента</p>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects scroll-reveal">
+            <h2>Мои проекты</h2>
+            <div class="projects-grid">
+                <!-- Project tiles will be added dynamically via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Window -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="#" alt="Project Image" id="modalImage">
+                <div class="project-info">
+                    <h3 id="modalTitle"></h3>
+                    <p id="modalDescription"></p>
+                    <a href="#" id="projectLink" class="project-link" target="_blank">Перейти к проекту</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="#" target="_blank" class="social-link">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html> 

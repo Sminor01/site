@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название проекта - Оператор</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/slider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="project-header">
+        <a href="../index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Назад
+        </a>
+        <h1>Название проекта</h1>
+    </header>
+
+    <main class="project-content">
+        <div class="slider-container">
+            <div class="slider">
+                <!-- Images will be added dynamically -->
+            </div>
+            <button class="slider-button prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-button next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots">
+                <!-- Dots will be added dynamically -->
+            </div>
+        </div>
+
+        <div class="project-description">
+            <h2>О проекте</h2>
+            <p>Подробное описание проекта...</p>
+        </div>
+    </main>
+
+    <script src="../js/slider.js"></script>
+    <script>
+        // Project-specific data
+        const projectData = {
+            title: "Название проекта",
+            images: [
+                "../images/project1/slide1.jpg",
+                "../images/project1/slide2.jpg",
+                "../images/project1/slide3.jpg"
+            ],
+            description: "Подробное описание проекта..."
+        };
+
+        // Initialize slider with project images
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeSlider(projectData.images);
+            document.title = `${projectData.title} - Оператор`;
+            document.querySelector('h1').textContent = projectData.title;
+            document.querySelector('.project-description p').textContent = projectData.description;
+        });
+    </script>
+</body>
+</html> 

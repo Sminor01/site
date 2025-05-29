@@ -1,0 +1,287 @@
+/* Project Page Styles */
+:root {
+    --header-height: clamp(60px, 10vw, 80px);
+    --slider-height: clamp(300px, 60vw, 600px);
+    --slider-button-size: clamp(25px, 5vw, 40px);
+    --dot-size: clamp(8px, 2vw, 12px);
+}
+
+.project-header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: clamp(15px, 3vw, 20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 2vw, 10px);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    transition: all 0.3s ease;
+    padding: clamp(8px, 2vw, 10px);
+    border-radius: clamp(4px, 1vw, 5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.back-button:hover {
+    color: #007bff;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-3px);
+}
+
+.back-button:active {
+    transform: translateX(0);
+}
+
+.project-header h1 {
+    margin: 0 auto;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    text-align: center;
+    line-height: 1.3;
+}
+
+.project-content {
+    margin-top: var(--header-height);
+    padding: clamp(20px, 5vw, 40px);
+    max-width: min(1200px, 95%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: min(1000px, 95%);
+    margin: 0 auto clamp(30px, 6vw, 40px);
+    overflow: hidden;
+    border-radius: clamp(8px, 2vw, 10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: #000;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    height: var(--slider-height);
+    touch-action: pan-y pinch-zoom;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: var(--slider-button-size);
+    height: var(--slider-button-size);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0.8;
+}
+
+.slider-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.slider-button:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.slider-button.prev {
+    left: clamp(10px, 3vw, 20px);
+}
+
+.slider-button.next {
+    right: clamp(10px, 3vw, 20px);
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: clamp(15px, 4vw, 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: clamp(8px, 2vw, 10px);
+    padding: clamp(5px, 1vw, 8px);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.dot {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+.dot.active {
+    background: #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Project Description */
+.project-description {
+    background: rgba(0, 0, 0, 0.9);
+    padding: clamp(20px, 5vw, 30px);
+    border-radius: clamp(8px, 2vw, 10px);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-description h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: clamp(15px, 4vw, 20px);
+    line-height: 1.3;
+}
+
+.project-description p {
+    line-height: 1.8;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Loading State */
+.slider-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.slider-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 2;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slider-button {
+        opacity: 0.6;
+    }
+
+    .slider-container:hover .slider-button {
+        opacity: 1;
+    }
+
+    .project-description {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-button {
+        width: calc(var(--slider-button-size) * 0.8);
+        height: calc(var(--slider-button-size) * 0.8);
+    }
+
+    .back-button {
+        padding: 6px 10px;
+    }
+
+    .slider-dots {
+        bottom: 10px;
+    }
+}
+
+/* Print styles */
+@media print {
+    .project-header {
+        position: static;
+        background: none;
+        box-shadow: none;
+    }
+
+    .project-content {
+        margin-top: 0;
+    }
+
+    .slider-container {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .slider-button,
+    .slider-dots {
+        display: none;
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    .slider img {
+        page-break-inside: avoid;
+    }
+
+    .project-description {
+        background: none;
+        box-shadow: none;
+        color: #000;
+    }
+} 
