@@ -186,6 +186,7 @@ main {
     min-height: 100dvh;
     padding: var(--section-spacing) var(--container-padding);
     position: relative;
+    background-color: #000000;
 }
 
 .projects h2 {
@@ -259,6 +260,7 @@ footer {
     padding: clamp(30px, 5vw, 40px) var(--container-padding);
     text-align: center;
     position: relative;
+    background-color: #000000;
 }
 
 .social-links {
@@ -282,7 +284,7 @@ footer {
 }
 
 .social-link:hover {
-    color: #007bff;
+    color: #000000;
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-3px);
 }
